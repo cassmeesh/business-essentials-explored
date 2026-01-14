@@ -21,7 +21,6 @@ export interface Lesson {
   shortTitle: string;
   description: string;
   duration: string;
-  audioUrl?: string;
   content: LessonContent;
   quiz: QuizQuestion[];
   matching?: MatchingItem[];
@@ -51,7 +50,6 @@ export const lessons: Lesson[] = [
     shortTitle: "Introduction",
     description: "Meet Stoneridge Software and Levridge — two connected companies helping businesses run better.",
     duration: "3 min",
-    audioUrl: "/audio/lesson-1.mp3",
     content: {
       sections: [
         {
@@ -113,7 +111,6 @@ export const lessons: Lesson[] = [
     shortTitle: "Stoneridge Software",
     description: "Learn what Stoneridge Software does and the industries we serve.",
     duration: "4 min",
-    audioUrl: "/audio/lesson-2.mp3",
     content: {
       sections: [
         {
@@ -183,7 +180,6 @@ export const lessons: Lesson[] = [
     shortTitle: "Stoneridge Revenue",
     description: "Understand the primary revenue streams that power Stoneridge Software.",
     duration: "5 min",
-    audioUrl: "/audio/lesson-3.mp3",
     content: {
       sections: [
         {
@@ -254,7 +250,6 @@ export const lessons: Lesson[] = [
     shortTitle: "Stoneridge Costs",
     description: "Learn about the major cost drivers for a consulting business like Stoneridge.",
     duration: "4 min",
-    audioUrl: "/audio/lesson-4.mp3",
     content: {
       sections: [
         {
@@ -320,7 +315,6 @@ export const lessons: Lesson[] = [
     shortTitle: "Levridge Origins",
     description: "Discover why Stoneridge created Levridge and its purpose in the market.",
     duration: "4 min",
-    audioUrl: "/audio/lesson-5.mp3",
     content: {
       sections: [
         {
@@ -387,7 +381,6 @@ export const lessons: Lesson[] = [
     shortTitle: "Levridge Revenue",
     description: "Understand Levridge's revenue model as a SaaS-style product company.",
     duration: "5 min",
-    audioUrl: "/audio/lesson-6.mp3",
     content: {
       sections: [
         {
@@ -463,7 +456,6 @@ export const lessons: Lesson[] = [
     shortTitle: "Levridge Strategy",
     description: "See how Levridge is evolving and growing within the Microsoft partner ecosystem.",
     duration: "4 min",
-    audioUrl: "/audio/lesson-7.mp3",
     content: {
       sections: [
         {
