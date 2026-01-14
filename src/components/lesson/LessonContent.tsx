@@ -243,8 +243,8 @@ export function LessonContent({ lesson }: LessonContentProps) {
             <div className="p-5">
               {/* Header */}
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Headphones className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                  <Headphones className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="font-display text-base font-semibold text-foreground">
                   Listen & Learn
