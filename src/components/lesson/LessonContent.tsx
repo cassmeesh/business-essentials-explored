@@ -6,6 +6,13 @@ import {
 } from 'lucide-react';
 import { Lesson, ContentSection, AccordionItem } from '@/data/lessons';
 import lesson1Audio from '@/assets/lesson1-audio.mp3';
+import lesson2Audio from '@/assets/lesson2-audio.mp3';
+
+const audioMap: Record<string, string> = {
+  'lesson1': lesson1Audio,
+  'lesson2': lesson2Audio,
+  '/src/assets/lesson1-audio.mp3': lesson1Audio,
+};
 import {
   Accordion,
   AccordionContent,
@@ -255,7 +262,7 @@ export function LessonContent({ lesson }: LessonContentProps) {
               <audio 
                 controls 
                 className="w-full mb-3"
-                src={lesson1Audio}
+                src={section.audioSrc ? audioMap[section.audioSrc] : undefined}
               >
                 Your browser does not support the audio element.
               </audio>
