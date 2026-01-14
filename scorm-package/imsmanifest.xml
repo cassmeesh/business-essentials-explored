@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SCORM 1.2 Manifest File
+  ========================
+  This file defines the structure and metadata for the SCORM package.
+  It tells the LMS what content is available and how to launch it.
+  
+  Key elements:
+  - <manifest>: Root element with unique identifier
+  - <metadata>: Course metadata (schema version)
+  - <organizations>: Course structure and sequencing
+  - <resources>: Physical files included in the package
+-->
+<manifest identifier="stoneridge-how-we-make-money" version="1.0"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2">
+  
+  <!-- Metadata describing the SCORM version -->
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  
+  <!-- Organizations define the course structure -->
+  <organizations default="stoneridge-org">
+    <organization identifier="stoneridge-org">
+      <title>How We Make Money</title>
+      
+      <!-- Each item represents a lesson/SCO (Sharable Content Object) -->
+      <!-- We use a single SCO approach for simplicity - all lessons in one resource -->
+      <item identifier="lesson-item" identifierref="resource-main" isvisible="true">
+        <title>How We Make Money - Complete Course</title>
+        <!-- adlcp:masteryscore sets passing threshold (0-100) -->
+        <adlcp:masteryscore>80</adlcp:masteryscore>
+      </item>
+      
+    </organization>
+  </organizations>
+  
+  <!-- Resources define the actual files -->
+  <resources>
+    <!-- Main resource - the entry point for the course -->
+    <!-- scormtype="sco" indicates this is a Sharable Content Object that communicates with LMS -->
+    <resource identifier="resource-main" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="scormdriver.js"/>
+      <file href="styles.css"/>
+    </resource>
+  </resources>
+  
+</manifest>
