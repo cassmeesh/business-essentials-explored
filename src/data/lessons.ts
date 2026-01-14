@@ -123,7 +123,7 @@ export const lessons: Lesson[] = [
         {
           type: 'audio',
           audioSrc: 'lesson2',
-          transcript: "Stoneridge Software is a consulting and technology services company. We help businesses implement, customize, and support Microsoft business applications like Dynamics three sixty five and Microsoft three sixty five.\n\nOur role is to ensure these systems are configured correctly so clients can manage accounting, operations, sales, and customer service more effectively. We primarily serve mid-sized organizations across key industries including, but not limited to: Agriculture, Food & Beverage, Specialty Construction, and Industrial Manufacturing."
+          transcript: "Stoneridge Software is a consulting and technology services company. We help businesses implement, customize, and support Microsoft business applications like Dynamics 365 and Microsoft 365.\n\nOur role is to ensure these systems are configured correctly so clients can manage accounting, operations, sales, and customer service more effectively. We primarily serve mid-sized organizations across key industries including, but not limited to: Agriculture, Food & Beverage, Specialty Construction, and Industrial Manufacturing."
         },
         {
           type: 'accordion',
