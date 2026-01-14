@@ -325,7 +325,7 @@ export const lessons: Lesson[] = [
         options: [
           "Marketing and advertising",
           "Office buildings",
-          "Salaries and benefits for consultants",
+          "Salaries and benefits for our people",
           "Software development"
         ],
         correctIndex: 2,
