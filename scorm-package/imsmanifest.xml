@@ -42,9 +42,23 @@
     <!-- Main resource - the entry point for the course -->
     <!-- scormtype="sco" indicates this is a Sharable Content Object that communicates with LMS -->
     <resource identifier="resource-main" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <!-- Core files -->
       <file href="index.html"/>
       <file href="scormdriver.js"/>
       <file href="styles.css"/>
+      
+      <!-- Image assets - copy these from src/assets/ before zipping -->
+      <file href="assets/stoneridge-logo.png"/>
+      <file href="assets/lesson1-reference.png"/>
+      
+      <!-- Audio assets - copy these from src/assets/ before zipping -->
+      <file href="assets/lesson1-audio.mp3"/>
+      <file href="assets/lesson2-audio.mp3"/>
+      <file href="assets/lesson3-audio.mp3"/>
+      <file href="assets/lesson4-audio.mp3"/>
+      <file href="assets/lesson5-audio.mp3"/>
+      <file href="assets/lesson6-audio.mp3"/>
+      <file href="assets/lesson7-audio.mp3"/>
     </resource>
   </resources>
   

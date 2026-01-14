@@ -27,7 +27,11 @@
     <!-- Header with Progress -->
     <header class="header">
         <div class="header-content">
-            <div class="header-title">How We Make Money</div>
+            <div class="header-brand">
+                <!-- Logo - place stoneridge-logo.png in assets/ folder -->
+                <img src="assets/stoneridge-logo.png" alt="Stoneridge" class="header-logo" onerror="this.style.display='none'">
+                <div class="header-title">How We Make Money</div>
+            </div>
             <div class="progress-container">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
@@ -94,6 +98,12 @@
                         content: "At Stoneridge, we help businesses run better using Microsoft technology. We do this through two connected but distinct companies: <strong>Stoneridge Software</strong> and <strong>Levridge</strong>."
                     },
                     {
+                        // Audio section - references assets/lesson1-audio.mp3
+                        type: 'audio',
+                        audioSrc: 'assets/lesson1-audio.mp3',
+                        transcript: "At Stoneridge, we help businesses run better using Microsoft technology.\n\nWe do this through two connected but distinct companies: Stoneridge Software and Levridge.\n\nTogether, they support organizations by implementing, extending, and optimizing Microsoft business solutions — with a strong focus on industry expertise."
+                    },
+                    {
                         type: 'accordion',
                         title: "The Two Companies",
                         items: [
@@ -146,6 +156,11 @@
                         content: "Stoneridge Software is a <strong>consulting and technology services company</strong>. We help businesses implement, customize, and support Microsoft business applications like Dynamics 365 and Microsoft 365."
                     },
                     {
+                        type: 'audio',
+                        audioSrc: 'assets/lesson2-audio.mp3',
+                        transcript: "Stoneridge Software is a consulting and technology services company. We help businesses implement, customize, and support Microsoft business applications like Dynamics 365 and Microsoft 365.\n\nOur role is to ensure these systems are configured correctly so clients can manage accounting, operations, sales, and customer service more effectively. We primarily serve mid-sized organizations across key industries including, but not limited to: Agriculture, Food & Beverage, Specialty Construction, and Industrial Manufacturing."
+                    },
+                    {
                         type: 'accordion',
                         title: "Industries We Serve",
                         items: [
@@ -195,6 +210,11 @@
                         content: "Understanding how we generate revenue helps everyone appreciate the business model and make better decisions. Let's explore Stoneridge Software's main revenue streams."
                     },
                     {
+                        type: 'audio',
+                        audioSrc: 'assets/lesson3-audio.mp3',
+                        transcript: "The majority of Stoneridge's revenue comes from consulting services. Clients pay us for the time and expertise of our consultants through either time-and-materials or subscription-based arrangements.\n\nThis includes: Software implementations, ongoing system support, and project work delivered by Stoneridge consultants or subcontractors."
+                    },
+                    {
                         type: 'accordion',
                         title: "Revenue Streams",
                         items: [
@@ -241,6 +261,11 @@
                     {
                         type: 'text',
                         content: "Every business has costs that enable it to operate and deliver value. For a consulting company like Stoneridge Software, understanding our cost structure helps explain business decisions."
+                    },
+                    {
+                        type: 'audio',
+                        audioSrc: 'assets/lesson4-audio.mp3',
+                        transcript: "Because Stoneridge is a consulting and services-based business, our largest costs are tied directly to the people, tools, and systems required to deliver value to our clients.\n\nThe first and largest cost category is salaries and benefits for consultants and subcontractors. These are the teams who do the work for our clients — including project managers, solution architects, developers, data specialists, and trainers."
                     },
                     {
                         type: 'accordion',
@@ -294,6 +319,11 @@
                         content: "Levridge is a <strong>software development company</strong> and <strong>independent software vendor (ISV)</strong>. But why did Stoneridge create a separate company?"
                     },
                     {
+                        type: 'audio',
+                        audioSrc: 'assets/lesson5-audio.mp3',
+                        transcript: "Levridge is a software development company and independent software vendor, or ISV. Stoneridge founded Levridge in 2018 as a strategic move to strengthen our agriculture industry focus. At the time, existing Microsoft solutions didn't fully meet the needs of agribusinesses — so we built something purpose-designed.\n\nLevridge is a cloud-based platform built on Dynamics 365, with specialized features like: Commodity accounting, grain trading, agronomy, and patronage tracking."
+                    },
+                    {
                         type: 'text',
                         content: "Stoneridge founded Levridge in 2018 as a strategic move to strengthen our agriculture industry focus. At the time, existing Microsoft solutions didn't fully meet the needs of agribusinesses — so we built something purpose-designed."
                     },
@@ -343,6 +373,11 @@
                         content: "Unlike Stoneridge Software's consulting model, Levridge operates more like a <strong>SaaS (Software as a Service)</strong> company. Let's explore how this different model generates revenue."
                     },
                     {
+                        type: 'audio',
+                        audioSrc: 'assets/lesson6-audio.mp3',
+                        transcript: "Unlike Stoneridge Software's consulting model, Levridge operates more like a SaaS — Software as a Service — company. Let's explore how this different model generates revenue.\n\nLevridge's core revenue comes from subscription licensing. Clients pay recurring fees to access and use the platform — similar to how you might subscribe to Netflix or Microsoft 365."
+                    },
+                    {
                         type: 'accordion',
                         title: "Levridge Revenue Streams",
                         items: [
@@ -389,6 +424,11 @@
                     {
                         type: 'text',
                         content: "As Levridge has matured, the company has been evolving to operate more independently as a true ISV (Independent Software Vendor)."
+                    },
+                    {
+                        type: 'audio',
+                        audioSrc: 'assets/lesson7-audio.mp3',
+                        transcript: "As Levridge has matured, the company has been evolving to operate more independently as a true ISV — Independent Software Vendor.\n\nThis strategic evolution includes operating more independently with dedicated leadership, expanding reach beyond Stoneridge clients, and building partnerships across the Microsoft ecosystem."
                     },
                     {
                         type: 'list',
@@ -692,10 +732,44 @@
          */
         function renderSection(section) {
             var html = '<div class="content-section">';
+            // Unique ID for audio/transcript elements
+            var uniqueId = 'section-' + Math.random().toString(36).substr(2, 9);
             
             switch (section.type) {
                 case 'text':
                     html += '<div class="text-content">' + section.content + '</div>';
+                    break;
+                
+                // Audio section - renders an audio player with optional transcript
+                case 'audio':
+                    html += '<div class="audio-section">' +
+                        '<div class="audio-header">' +
+                        '<div class="audio-icon">🎧</div>' +
+                        '<span class="audio-label">Listen to Audio</span>' +
+                        '</div>' +
+                        '<audio controls class="audio-player" preload="metadata">' +
+                        '<source src="' + section.audioSrc + '" type="audio/mpeg">' +
+                        'Your browser does not support the audio element.' +
+                        '</audio>';
+                    
+                    // Add transcript toggle if available
+                    if (section.transcript) {
+                        html += '<button class="transcript-toggle" onclick="toggleTranscript(\'' + uniqueId + '\')">' +
+                            '📄 Show Transcript' +
+                            '</button>' +
+                            '<div id="transcript-' + uniqueId + '" class="transcript-content">' +
+                            section.transcript +
+                            '</div>';
+                    }
+                    html += '</div>';
+                    break;
+                
+                // Image section - renders an image with optional caption
+                case 'image':
+                    html += '<figure>' +
+                        '<img src="' + section.src + '" alt="' + (section.alt || '') + '" class="reference-image">' +
+                        (section.caption ? '<figcaption class="image-caption">' + section.caption + '</figcaption>' : '') +
+                        '</figure>';
                     break;
                     
                 case 'highlight':
@@ -762,6 +836,26 @@
             html += '</div>';
             return html;
         }
+        
+        /**
+         * Toggle transcript visibility.
+         * Called by onclick handler on transcript buttons.
+         * 
+         * @param {string} id - Unique ID of the transcript element
+         */
+        function toggleTranscript(id) {
+            var transcript = document.getElementById('transcript-' + id);
+            var button = transcript.previousElementSibling;
+            if (transcript.classList.contains('open')) {
+                transcript.classList.remove('open');
+                button.innerHTML = '📄 Show Transcript';
+            } else {
+                transcript.classList.add('open');
+                button.innerHTML = '📄 Hide Transcript';
+            }
+        }
+        // Expose toggleTranscript globally for onclick handlers
+        window.toggleTranscript = toggleTranscript;
 
         /**
          * Initialize accordion functionality.
