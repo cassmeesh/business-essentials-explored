@@ -1,20 +1,22 @@
 import { useState, useRef } from 'react';
-import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, FileText, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface AudioPlayerProps {
   src: string;
   title?: string;
+  transcript?: string;
 }
 
-export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
+export const AudioPlayer = ({ src, title, transcript }: AudioPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
+  const [showTranscript, setShowTranscript] = useState(false);
 
   const togglePlay = () => {
     if (audioRef.current) {
@@ -130,6 +132,43 @@ export const AudioPlayer = ({ src, title }: AudioPlayerProps) => {
           )}
         </Button>
       </div>
+
+      {transcript && (
+        <div className="mt-4 border-t border-primary/10 pt-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setShowTranscript(!showTranscript)}
+            className="text-muted-foreground hover:text-foreground flex items-center gap-2 px-0"
+          >
+            <FileText className="h-4 w-4" />
+            <span>Transcript</span>
+            {showTranscript ? (
+              <ChevronUp className="h-4 w-4" />
+            ) : (
+              <ChevronDown className="h-4 w-4" />
+            )}
+          </Button>
+          
+          <AnimatePresence>
+            {showTranscript && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.2 }}
+                className="overflow-hidden"
+              >
+                <div className="mt-3 p-4 bg-muted/50 rounded-lg">
+                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {transcript}
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      )}
     </motion.div>
   );
 };

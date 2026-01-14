@@ -37,6 +37,7 @@ export interface ContentSection {
   items?: string[] | AccordionItem[];
   data?: Record<string, unknown>;
   audioSrc?: string;
+  transcript?: string;
 }
 
 export interface AccordionItem {
@@ -60,7 +61,8 @@ export const lessons: Lesson[] = [
         {
           type: 'audio',
           title: "Listen: Introduction to Who We Are",
-          audioSrc: "/audio/lesson-1-who-we-are.mp3"
+          audioSrc: "/audio/lesson-1-who-we-are.mp3",
+          transcript: "At Stoneridge, we help businesses run better using Microsoft technology.\n\nWe do this through two connected but distinct companies: Stoneridge Software and Levridge.\n\nTogether, they support organizations by implementing, extending, and optimizing Microsoft business solutions — with a strong focus on industry expertise."
         },
         {
           type: 'accordion',

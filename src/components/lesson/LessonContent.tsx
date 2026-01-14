@@ -236,7 +236,8 @@ export function LessonContent({ lesson }: LessonContentProps) {
           >
             <AudioPlayer 
               src={section.audioSrc || ''} 
-              title={section.title} 
+              title={section.title}
+              transcript={section.transcript}
             />
           </motion.div>
         );
