@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Clock, CheckCircle2, BookOpen } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Clock, CheckCircle2, BookOpen, Trophy } from 'lucide-react';
 import { Lesson } from '@/data/lessons';
 import { LessonContent } from './LessonContent';
 import { KnowledgeCheck } from './KnowledgeCheck';
@@ -18,6 +18,7 @@ interface LessonViewProps {
   onNext: () => void;
   hasPrevious: boolean;
   hasNext: boolean;
+  onExit?: () => void;
 }
 
 export function LessonView({
@@ -28,6 +29,7 @@ export function LessonView({
   onNext,
   hasPrevious,
   hasNext,
+  onExit,
 }: LessonViewProps) {
   const [viewState, setViewState] = useState<ViewState>(
     isCompleted ? 'complete' : 'content'
@@ -35,6 +37,8 @@ export function LessonView({
   const [quizScore, setQuizScore] = useState<number | null>(null);
 
   const hasMatching = lesson.matching && lesson.matching.length > 0;
+  const hasQuiz = lesson.quiz && lesson.quiz.length > 0;
+  const isLastLesson = lesson.id === 8;
 
   const handleStartQuiz = () => {
     setViewState('quiz');
@@ -94,10 +98,12 @@ export function LessonView({
             <Clock className="w-4 h-4" />
             <span>{lesson.duration}</span>
           </div>
-          <div className="flex items-center gap-1">
-            <BookOpen className="w-4 h-4" />
-            <span>{lesson.quiz.length} question{lesson.quiz.length !== 1 ? 's' : ''}</span>
-          </div>
+          {hasQuiz && (
+            <div className="flex items-center gap-1">
+              <BookOpen className="w-4 h-4" />
+              <span>{lesson.quiz.length} question{lesson.quiz.length !== 1 ? 's' : ''}</span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -113,14 +119,28 @@ export function LessonView({
             <LessonContent lesson={lesson} />
 
             <div className="mt-8 flex justify-center">
-              <Button
-                onClick={handleStartQuiz}
-                size="lg"
-                className="bg-primary hover:bg-primary/90"
-              >
-                Take Knowledge Check
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              {isLastLesson && !hasQuiz ? (
+                <Button
+                  onClick={() => {
+                    setViewState('complete');
+                    onComplete(100);
+                  }}
+                  size="lg"
+                  className="bg-success hover:bg-success/90 text-success-foreground"
+                >
+                  <Trophy className="w-4 h-4 mr-2" />
+                  Complete Course
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleStartQuiz}
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90"
+                >
+                  Take Knowledge Check
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              )}
             </div>
           </motion.div>
         )}
@@ -162,27 +182,41 @@ export function LessonView({
             className="text-center py-12"
           >
             <motion.div
-              className="w-20 h-20 rounded-full bg-success mx-auto mb-6 flex items-center justify-center"
+              className={cn(
+                "w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center",
+                isLastLesson ? "bg-accent" : "bg-success"
+              )}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
             >
-              <CheckCircle2 className="w-10 h-10 text-success-foreground" />
+              {isLastLesson ? (
+                <Trophy className="w-10 h-10 text-accent-foreground" />
+              ) : (
+                <CheckCircle2 className="w-10 h-10 text-success-foreground" />
+              )}
             </motion.div>
 
             <h3 className="font-display text-2xl font-bold text-foreground mb-2">
-              Lesson Complete!
+              {isLastLesson ? 'Course Complete!' : 'Lesson Complete!'}
             </h3>
             <p className="text-muted-foreground mb-8">
-              You've successfully completed this lesson.
-              {quizScore !== null && ` Quiz Score: ${quizScore}%`}
+              {isLastLesson 
+                ? "Congratulations! You've completed the entire course."
+                : `You've successfully completed this lesson.${quizScore !== null ? ` Quiz Score: ${quizScore}%` : ''}`
+              }
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
               <Button variant="outline" onClick={handleReview}>
                 Review Content
               </Button>
-              {hasNext && (
+              {isLastLesson && onExit ? (
+                <Button onClick={onExit} className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Trophy className="w-4 h-4 mr-2" />
+                  Back to Home
+                </Button>
+              ) : hasNext && (
                 <Button onClick={onNext} className="bg-primary hover:bg-primary/90">
                   Next Lesson
                   <ArrowRight className="w-4 h-4 ml-2" />

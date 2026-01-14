@@ -151,6 +151,7 @@ export function CourseView({ onExit }: CourseViewProps) {
                   progress.currentLesson < 8 &&
                   isLessonAccessible(progress.currentLesson + 1)
                 }
+                onExit={onExit}
               />
             </AnimatePresence>
           </main>
