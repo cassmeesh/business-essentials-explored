@@ -235,7 +235,7 @@ export function LessonContent({ lesson }: LessonContentProps) {
         return (
           <motion.div
             key={index}
-            className="bg-gradient-to-br from-accent via-accent to-accent/80 rounded-xl overflow-hidden mb-6"
+            className="bg-gradient-to-br from-accent via-accent to-accent/80 rounded-xl overflow-hidden mb-6 ring-2 ring-accent/30 ring-offset-2 ring-offset-background"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
