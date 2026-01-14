@@ -31,11 +31,12 @@ export interface LessonContent {
 }
 
 export interface ContentSection {
-  type: 'text' | 'highlight' | 'list' | 'accordion' | 'comparison' | 'stats';
+  type: 'text' | 'highlight' | 'list' | 'accordion' | 'comparison' | 'stats' | 'audio';
   title?: string;
   content?: string;
   items?: string[] | AccordionItem[];
   data?: Record<string, unknown>;
+  audioSrc?: string;
 }
 
 export interface AccordionItem {
@@ -57,8 +58,9 @@ export const lessons: Lesson[] = [
           content: "At Stoneridge, we help businesses run better using Microsoft technology. We do this through two connected but distinct companies: **Stoneridge Software** and **Levridge**."
         },
         {
-          type: 'highlight',
-          content: "Together, they support organizations by implementing, extending, and optimizing Microsoft business solutions — with a strong focus on industry expertise."
+          type: 'audio',
+          title: "Listen: Introduction to Who We Are",
+          audioSrc: "/audio/lesson-1-who-we-are.mp3"
         },
         {
           type: 'accordion',

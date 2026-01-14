@@ -5,6 +5,7 @@ import {
   Globe, Leaf 
 } from 'lucide-react';
 import { Lesson, ContentSection, AccordionItem } from '@/data/lessons';
+import { AudioPlayer } from './AudioPlayer';
 import {
   Accordion,
   AccordionContent,
@@ -222,6 +223,21 @@ export function LessonContent({ lesson }: LessonContentProps) {
                 );
               })}
             </div>
+          </motion.div>
+        );
+
+      case 'audio':
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <AudioPlayer 
+              src={section.audioSrc || ''} 
+              title={section.title} 
+            />
           </motion.div>
         );
 
