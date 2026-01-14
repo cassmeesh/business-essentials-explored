@@ -345,10 +345,6 @@ export const lessons: Lesson[] = [
           transcript: "Levridge is a software development company and independent software vendor, or ISV. Stoneridge founded Levridge in 2018 as a strategic move to strengthen our agriculture industry focus. At the time, existing Microsoft solutions didn't fully meet the needs of agribusinesses — so we built something purpose-designed.\n\nLevridge is a cloud-based platform built on Dynamics 365, with specialized features like: Commodity accounting, grain trading, agronomy, and patronage tracking."
         },
         {
-          type: 'highlight',
-          content: "Stoneridge founded Levridge in 2018 as a strategic move to strengthen our agriculture industry focus. At the time, existing Microsoft solutions didn't fully meet the needs of agribusinesses — so we built something purpose-designed."
-        },
-        {
           type: 'text',
           content: "Levridge is a cloud-based platform built on Dynamics 365, with specialized features designed specifically for agricultural businesses."
         },
