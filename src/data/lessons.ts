@@ -225,6 +225,11 @@ export const lessons: Lesson[] = [
           }
         },
         {
+          type: 'audio',
+          audioSrc: 'lesson3',
+          transcript: "The majority of Stoneridge's revenue comes from consulting services. Clients pay us for the time and expertise of our consultants through either time-and-materials or subscription-based arrangements.\n\nThis includes: Software implementations, ongoing system support, and project work delivered by Stoneridge consultants or subcontractors."
+        },
+        {
           type: 'highlight',
           content: "Key insight: As a consulting business, our revenue is directly tied to the time and expertise of our people."
         }
@@ -279,6 +284,11 @@ export const lessons: Lesson[] = [
           ]
         },
         {
+          type: 'audio',
+          audioSrc: 'lesson4',
+          transcript: "Because Stoneridge is a consulting and services-based business, our largest costs are tied directly to the people, tools, and systems required to deliver value to our clients.\n\nThe first and largest cost category is salaries and benefits for consultants and subcontractors. These are the teams who do the work for our clients — including project managers, solution architects, developers, data specialists, and trainers. This category also includes subcontractors who provide additional capacity or specialized expertise, as well as project-related expenses like travel for onsite client work when needed. Since our revenue is generated through expert services, investing in skilled delivery teams is essential to client success and to the business overall.\n\nAnother key cost area is Microsoft and third-party license costs. When Stoneridge resells software licenses, we first purchase those licenses from Microsoft or other vendors before selling them to clients. We also manage license provisioning, optimization, compliance, and renewals as part of this process. While licensing resale is an important revenue stream, these upfront costs are a core part of how the business manages margins.\n\nFinally, there are operational and support costs that keep the business running. These include salaries and benefits for internal teams. They also include internal tools and systems like CRM platforms and project management software, along with marketing efforts, sales commissions, and office expenses.\n\nThese teams and systems allow consultants to focus on delivering high-quality work to clients while ensuring the business operates efficiently and sustainably. Altogether, this cost structure reflects a people-driven consulting business. Success depends on hiring and retaining talented professionals, balancing delivery capacity with client demand, and investing in the internal systems that allow the company to scale and grow."
+        },
+        {
           type: 'highlight',
           content: "This cost structure reflects a people-driven consulting business. Our biggest investment is in talented people who deliver value to clients."
         },
@@ -324,6 +334,11 @@ export const lessons: Lesson[] = [
         {
           type: 'text',
           content: "Levridge is a **software development company** and **independent software vendor (ISV)**. But why did Stoneridge create a separate company?"
+        },
+        {
+          type: 'audio',
+          audioSrc: 'lesson5',
+          transcript: "Levridge is a software development company and independent software vendor, or ISV. Stoneridge founded Levridge in 2018 as a strategic move to strengthen our agriculture industry focus. At the time, existing Microsoft solutions didn't fully meet the needs of agribusinesses — so we built something purpose-designed.\n\nLevridge is a cloud-based platform built on Dynamics 365, with specialized features like: Commodity accounting, grain trading, agronomy, and patronage tracking."
         },
         {
           type: 'highlight',
@@ -410,6 +425,11 @@ export const lessons: Lesson[] = [
           ]
         },
         {
+          type: 'audio',
+          audioSrc: 'lesson6',
+          transcript: "Levridge's core revenue comes from subscription licensing. Clients pay recurring fees to access and use the platform — similar to a SaaS subscription model. As more agribusinesses adopt Levridge, this recurring revenue grows. Levridge also generates revenue through add-on features and enhancements.\n\nThese may include advanced integrations or specialized workflows requested by clients. These are typically one-time or project-based fees in addition to the base subscription. While Levridge is primarily a product company, it also earns consulting revenue — especially for onboarding, configuration, and training. This work often happens in close collaboration with Stoneridge Software.\n\nThese teams and systems allow consultants to focus on delivering high-quality work to clients while ensuring the business operates efficiently and sustainably. Altogether, this cost structure reflects a people-driven consulting business. Success depends on hiring and retaining talented professionals, balancing delivery capacity with client demand, and investing in the internal systems that allow the company to scale and grow."
+        },
+        {
           type: 'highlight',
           content: "Key difference: Subscription revenue is recurring and predictable, making it easier to plan for the future. Each new customer adds to a growing base of monthly revenue."
         },
@@ -465,6 +485,11 @@ export const lessons: Lesson[] = [
         {
           type: 'text',
           content: "As Levridge has matured, the company has been evolving to operate more independently as a true ISV (Independent Software Vendor)."
+        },
+        {
+          type: 'audio',
+          audioSrc: 'lesson7',
+          transcript: "As Levridge has matured, the company has been evolving to operate more independently as a true ISV.\n\nA separate CEO was hired, and the business is being positioned to serve not only Stoneridge clients, but the broader Microsoft partner ecosystem.\n\nThis allows Levridge to scale its impact across the agriculture industry while remaining deeply connected to Microsoft's platform."
         },
         {
           type: 'highlight',

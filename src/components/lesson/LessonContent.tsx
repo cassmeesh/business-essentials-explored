@@ -7,11 +7,20 @@ import {
 import { Lesson, ContentSection, AccordionItem } from '@/data/lessons';
 import lesson1Audio from '@/assets/lesson1-audio.mp3';
 import lesson2Audio from '@/assets/lesson2-audio.mp3';
+import lesson3Audio from '@/assets/lesson3-audio.mp3';
+import lesson4Audio from '@/assets/lesson4-audio.mp3';
+import lesson5Audio from '@/assets/lesson5-audio.mp3';
+import lesson6Audio from '@/assets/lesson6-audio.mp3';
+import lesson7Audio from '@/assets/lesson7-audio.mp3';
 
 const audioMap: Record<string, string> = {
   'lesson1': lesson1Audio,
   'lesson2': lesson2Audio,
-  '/src/assets/lesson1-audio.mp3': lesson1Audio,
+  'lesson3': lesson3Audio,
+  'lesson4': lesson4Audio,
+  'lesson5': lesson5Audio,
+  'lesson6': lesson6Audio,
+  'lesson7': lesson7Audio,
 };
 import {
   Accordion,
