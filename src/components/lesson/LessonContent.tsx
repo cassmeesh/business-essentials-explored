@@ -12,6 +12,11 @@ import {
   AccordionItem as AccordionItemUI,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible';
 
 interface LessonContentProps {
   lesson: Lesson;
@@ -251,12 +256,18 @@ export function LessonContent({ lesson }: LessonContentProps) {
               Your browser does not support the audio element.
             </audio>
             {section.transcript && (
-              <div className="bg-muted/50 rounded-lg p-4 border border-border">
-                <p className="text-sm font-medium text-muted-foreground mb-2">Transcript</p>
-                <p className="text-foreground leading-relaxed whitespace-pre-line">
-                  {section.transcript}
-                </p>
-              </div>
+              <Collapsible>
+                <CollapsibleTrigger className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+                  <span>View Transcript</span>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <div className="bg-muted/50 rounded-lg p-4 border border-border mt-3">
+                    <p className="text-foreground leading-relaxed whitespace-pre-line">
+                      {section.transcript}
+                    </p>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
             )}
           </motion.div>
         );
