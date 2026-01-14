@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="stoneridge-business-model-course" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  
+  <organizations default="stoneridge-org">
+    <organization identifier="stoneridge-org">
+      <title>Stoneridge Business Model Training</title>
+      
+      <item identifier="lesson1" identifierref="resource_lesson1">
+        <title>Lesson 1: Why Understanding Business Models Matters</title>
+      </item>
+      <item identifier="lesson2" identifierref="resource_lesson2">
+        <title>Lesson 2: What Is a Business Model?</title>
+      </item>
+      <item identifier="lesson3" identifierref="resource_lesson3">
+        <title>Lesson 3: The Consulting Business Model</title>
+      </item>
+      <item identifier="lesson4" identifierref="resource_lesson4">
+        <title>Lesson 4: Consulting Revenue in Practice</title>
+      </item>
+      <item identifier="lesson5" identifierref="resource_lesson5">
+        <title>Lesson 5: Introducing Levridge</title>
+      </item>
+      <item identifier="lesson6" identifierref="resource_lesson6">
+        <title>Lesson 6: The ISV Business Model</title>
+      </item>
+      <item identifier="lesson7" identifierref="resource_lesson7">
+        <title>Lesson 7: Why Business Models Matter to You</title>
+      </item>
+    </organization>
+  </organizations>
+  
+  <resources>
+    <resource identifier="resource_lesson1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+    </resource>
+    <resource identifier="resource_lesson2" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+    <resource identifier="resource_lesson3" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+    <resource identifier="resource_lesson4" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+    <resource identifier="resource_lesson5" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+    <resource identifier="resource_lesson6" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+    <resource identifier="resource_lesson7" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+  </resources>
+  
+</manifest>
