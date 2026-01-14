@@ -278,6 +278,12 @@ export const lessons: Lesson[] = [
           content: "Every business has costs that enable it to operate and deliver value. For a consulting company like Stoneridge Software, understanding our cost structure helps explain business decisions."
         },
         {
+          type: 'audio',
+          title: "Cost Structure Overview",
+          audioSrc: "/audio/lesson-4-cost-structure.mp3",
+          transcript: "Because Stoneridge is a consulting and services-based business, our largest costs are tied directly to the people, tools, and systems required to deliver value to our clients.\n\nThe first and largest cost category is salaries and benefits for consultants and subcontractors. These are the teams who do the work for our clients — including project managers, solution architects, developers, data specialists, and trainers. This category also includes subcontractors who provide additional capacity or specialized expertise, as well as project-related expenses like travel for onsite client work when needed. Since our revenue is generated through expert services, investing in skilled delivery teams is essential to client success and to the business overall.\n\nAnother key cost area is Microsoft and third-party license costs. When Stoneridge resells software licenses, we first purchase those licenses from Microsoft or other vendors before selling them to clients. We also manage license provisioning, optimization, compliance, and renewals as part of this process. While licensing resale is an important revenue stream, these upfront costs are a core part of how the business manages margins.\n\nFinally, there are operational and support costs that keep the business running. These include salaries and benefits for internal teams. They also include internal tools and systems like CRM platforms and project management software, along with marketing efforts, sales commissions, and office expenses.\n\nThese teams and systems allow consultants to focus on delivering high-quality work to clients while ensuring the business operates efficiently and sustainably. Altogether, this cost structure reflects a people-driven consulting business. Success depends on hiring and retaining talented professionals, balancing delivery capacity with client demand, and investing in the internal systems that allow the company to scale and grow."
+        },
+        {
           type: 'accordion',
           title: "Major Cost Categories",
           items: [
