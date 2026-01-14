@@ -407,6 +407,11 @@ export const lessons: Lesson[] = [
           content: "Unlike Stoneridge Software's consulting model, Levridge operates more like a **SaaS (Software as a Service)** company. Let's explore how this different model generates revenue."
         },
         {
+          type: 'audio',
+          audioSrc: 'lesson6',
+          transcript: "Levridge's core revenue comes from subscription licensing. Clients pay recurring fees to access and use the platform — similar to a SaaS subscription model. As more agribusinesses adopt Levridge, this recurring revenue grows. Levridge also generates revenue through add-on features and enhancements.\n\nThese may include advanced integrations or specialized workflows requested by clients. These are typically one-time or project-based fees in addition to the base subscription. While Levridge is primarily a product company, it also earns consulting revenue — especially for onboarding, configuration, and training. This work often happens in close collaboration with Stoneridge Software.\n\nThese teams and systems allow consultants to focus on delivering high-quality work to clients while ensuring the business operates efficiently and sustainably. Altogether, this cost structure reflects a people-driven consulting business. Success depends on hiring and retaining talented professionals, balancing delivery capacity with client demand, and investing in the internal systems that allow the company to scale and grow."
+        },
+        {
           type: 'accordion',
           title: "Levridge Revenue Streams",
           items: [
@@ -423,11 +428,6 @@ export const lessons: Lesson[] = [
               content: "While primarily a product company, Levridge also earns consulting revenue — especially for onboarding, configuration, and training. This work often happens in close collaboration with Stoneridge Software."
             }
           ]
-        },
-        {
-          type: 'audio',
-          audioSrc: 'lesson6',
-          transcript: "Levridge's core revenue comes from subscription licensing. Clients pay recurring fees to access and use the platform — similar to a SaaS subscription model. As more agribusinesses adopt Levridge, this recurring revenue grows. Levridge also generates revenue through add-on features and enhancements.\n\nThese may include advanced integrations or specialized workflows requested by clients. These are typically one-time or project-based fees in addition to the base subscription. While Levridge is primarily a product company, it also earns consulting revenue — especially for onboarding, configuration, and training. This work often happens in close collaboration with Stoneridge Software.\n\nThese teams and systems allow consultants to focus on delivering high-quality work to clients while ensuring the business operates efficiently and sustainably. Altogether, this cost structure reflects a people-driven consulting business. Success depends on hiring and retaining talented professionals, balancing delivery capacity with client demand, and investing in the internal systems that allow the company to scale and grow."
         },
         {
           type: 'highlight',
