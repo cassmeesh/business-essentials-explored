@@ -492,10 +492,6 @@ export const lessons: Lesson[] = [
           transcript: "As Levridge has matured, the company has been evolving to operate more independently as a true ISV.\n\nA separate CEO was hired, and the business is being positioned to serve not only Stoneridge clients, but the broader Microsoft partner ecosystem.\n\nThis allows Levridge to scale its impact across the agriculture industry while remaining deeply connected to Microsoft's platform."
         },
         {
-          type: 'highlight',
-          content: "A separate CEO was hired, and the business is being positioned to serve not only Stoneridge clients, but the broader Microsoft partner ecosystem."
-        },
-        {
           type: 'list',
           title: "Strategic Evolution",
           items: [
