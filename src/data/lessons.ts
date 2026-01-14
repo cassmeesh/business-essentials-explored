@@ -537,11 +537,6 @@ While Levridge is primarily a product company, it also earns consulting revenue 
             "As Levridge has matured, the company has been evolving to operate more independently as a true ISV (Independent Software Vendor).",
         },
         {
-          type: "highlight",
-          content:
-            "A separate CEO was hired, and the business is being positioned to serve not only Stoneridge clients, but the broader Microsoft partner ecosystem.",
-        },
-        {
           type: "audio",
           title: "Levridge Strategic Direction",
           audioSrc: "/audio/lesson-7-levridge-strategy.mp3",
