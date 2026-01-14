@@ -55,6 +55,9 @@
 
     --radius: 0.5rem;
 
+    /* Lesson Content Icons */
+    --lesson-icon: 200 28% 65%;
+
     /* Lesson Progress Colors */
     --lesson-complete: 99 49% 48%;
     --lesson-current: 209 100% 28%;
@@ -215,12 +218,12 @@
 
   .icon-circle {
     @apply w-12 h-12 rounded-full flex items-center justify-center;
-    background: var(--gradient-primary);
+    background: hsl(var(--lesson-icon) / 0.2);
   }
 
   .icon-circle-accent {
     @apply w-12 h-12 rounded-full flex items-center justify-center;
-    background: var(--gradient-accent);
+    background: hsl(var(--lesson-icon) / 0.2);
   }
 }
 
