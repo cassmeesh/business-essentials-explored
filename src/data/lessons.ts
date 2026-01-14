@@ -60,7 +60,7 @@ export const lessons: Lesson[] = [
         },
         {
           type: 'audio',
-          audioSrc: '/src/assets/lesson1-audio.mp3',
+          audioSrc: 'lesson1',
           transcript: "At Stoneridge, we help businesses run better using Microsoft technology.\n\nWe do this through two connected but distinct companies: Stoneridge Software and Levridge.\n\nTogether, they support organizations by implementing, extending, and optimizing Microsoft business solutions — with a strong focus on industry expertise."
         },
         {
@@ -121,8 +121,9 @@ export const lessons: Lesson[] = [
           content: "Stoneridge Software is a **consulting and technology services company**. We help businesses implement, customize, and support Microsoft business applications like Dynamics 365 and Microsoft 365."
         },
         {
-          type: 'highlight',
-          content: "Our role is to ensure these systems are configured correctly so clients can manage accounting, operations, sales, and customer service more effectively."
+          type: 'audio',
+          audioSrc: 'lesson2',
+          transcript: "Stoneridge Software is a consulting and technology services company. We help businesses implement, customize, and support Microsoft business applications like Dynamics three sixty five and Microsoft three sixty five.\n\nOur role is to ensure these systems are configured correctly so clients can manage accounting, operations, sales, and customer service more effectively. We primarily serve mid-sized organizations across key industries including, but not limited to: Agriculture, Food & Beverage, Specialty Construction, and Industrial Manufacturing."
         },
         {
           type: 'accordion',
