@@ -69,7 +69,7 @@ export function WelcomeScreen({ onStart, progress }: WelcomeScreenProps) {
               <Button
                 size="lg"
                 onClick={onStart}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 font-semibold"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 font-semibold relative z-10"
               >
                 {hasProgress ? 'Continue Learning' : 'Start Course'}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -191,7 +191,7 @@ export function WelcomeScreen({ onStart, progress }: WelcomeScreenProps) {
               <Button
                 size="lg"
                 onClick={onStart}
-                className="bg-primary hover:bg-primary/90"
+                className="bg-primary hover:bg-primary/90 relative z-10"
               >
                 {hasProgress ? 'Continue Where You Left Off' : 'Begin Course'}
                 <ArrowRight className="w-5 h-5 ml-2" />
