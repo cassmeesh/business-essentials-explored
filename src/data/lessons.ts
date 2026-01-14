@@ -43,6 +43,7 @@ export interface ContentSection {
 export interface AccordionItem {
   title: string;
   content: string;
+  icon?: string;
 }
 
 export const lessons: Lesson[] = [
@@ -133,19 +134,23 @@ export const lessons: Lesson[] = [
           items: [
             {
               title: "Agriculture",
-              content: "We support agricultural businesses with specialized solutions for commodity management, grain trading, and farm operations."
+              content: "We support agricultural businesses with specialized solutions for commodity management, grain trading, and farm operations.",
+              icon: "wheat"
             },
             {
               title: "Food & Beverage",
-              content: "From production planning to compliance tracking, we help food and beverage companies streamline their operations."
+              content: "From production planning to compliance tracking, we help food and beverage companies streamline their operations.",
+              icon: "utensils"
             },
             {
               title: "Specialty Construction",
-              content: "We help specialty contractors manage complex projects, subcontractor relationships, and job costing with tailored Microsoft solutions."
+              content: "We help specialty contractors manage complex projects, subcontractor relationships, and job costing with tailored Microsoft solutions.",
+              icon: "hard-hat"
             },
             {
               title: "Industrial Manufacturing",
-              content: "We serve manufacturers with complex supply chains, helping them optimize production and distribution."
+              content: "We serve manufacturers with complex supply chains, helping them optimize production and distribution.",
+              icon: "factory"
             }
           ]
         },
