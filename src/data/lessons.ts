@@ -448,6 +448,18 @@ Levridge is a cloud-based platform built on Dynamics 365, with specialized featu
             "Unlike Stoneridge Software's consulting model, Levridge operates more like a **SaaS (Software as a Service)** company. Let's explore how this different model generates revenue.",
         },
         {
+          type: "audio",
+          title: "Levridge Revenue Model",
+          audioSrc: "/audio/lesson-6-levridge-revenue.mp3",
+          transcript: `Levridge's core revenue comes from subscription licensing. Clients pay recurring fees to access and use the platform — similar to a SaaS subscription model. As more agribusinesses adopt Levridge, this recurring revenue grows.
+
+Levridge also generates revenue through add-on features and enhancements.
+
+These may include advanced integrations or specialized workflows requested by clients. These are typically one-time or project-based fees in addition to the base subscription.
+
+While Levridge is primarily a product company, it also earns consulting revenue — especially for onboarding, configuration, and training. This work often happens in close collaboration with Stoneridge Software.`,
+        },
+        {
           type: "accordion",
           title: "Levridge Revenue Streams",
           items: [
