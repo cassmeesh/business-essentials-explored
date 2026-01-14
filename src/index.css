@@ -35,6 +35,10 @@
     --accent: 66 48% 45%;
     --accent-foreground: 0 0% 100%;
 
+    /* Icon - Stoneridge Cyan (#3fb6d4) */
+    --icon: 191 62% 54%;
+    --icon-foreground: 0 0% 100%;
+
     /* Success - Green (same as accent for brand consistency) */
     --success: 99 49% 48%;
     --success-foreground: 0 0% 100%;
@@ -215,7 +219,7 @@
 
   .icon-circle {
     @apply w-12 h-12 rounded-full flex items-center justify-center;
-    background: var(--gradient-primary);
+    background: hsl(var(--icon));
   }
 
   .icon-circle-accent {
