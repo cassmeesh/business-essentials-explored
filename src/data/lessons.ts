@@ -542,6 +542,16 @@ While Levridge is primarily a product company, it also earns consulting revenue 
             "A separate CEO was hired, and the business is being positioned to serve not only Stoneridge clients, but the broader Microsoft partner ecosystem.",
         },
         {
+          type: "audio",
+          title: "Levridge Strategic Direction",
+          audioSrc: "/audio/lesson-7-levridge-strategy.mp3",
+          transcript: `As Levridge has matured, the company has been evolving to operate more independently as a true ISV.
+
+A separate CEO was hired, and the business is being positioned to serve not only Stoneridge clients, but the broader Microsoft partner ecosystem.
+
+This allows Levridge to scale its impact across the agriculture industry while remaining deeply connected to Microsoft's platform.`,
+        },
+        {
           type: "list",
           title: "Strategic Evolution",
           items: [
