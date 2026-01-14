@@ -375,9 +375,16 @@ export const lessons: Lesson[] = [
             "Levridge is a **software development company** and **independent software vendor (ISV)**. But why did Stoneridge create a separate company?",
         },
         {
-          type: "highlight",
-          content:
-            "Stoneridge founded Levridge in 2018 as a strategic move to strengthen our agriculture industry focus. At the time, existing Microsoft solutions didn't fully meet the needs of agribusinesses — so we built something purpose-designed.",
+          type: "audio",
+          title: "Levridge Origins",
+          audioSrc: "/audio/lesson-5-levridge-origins.mp3",
+          transcript: `Levridge is a software development company and independent software vendor, or ISV.
+
+Stoneridge founded Levridge in 2018 as a strategic move to strengthen our agriculture industry focus.
+
+At the time, existing Microsoft solutions didn't fully meet the needs of agribusinesses — so we built something purpose-designed.
+
+Levridge is a cloud-based platform built on Dynamics 365, with specialized features like: Commodity accounting, grain trading, agronomy, and patronage tracking.`,
         },
         {
           type: "text",
