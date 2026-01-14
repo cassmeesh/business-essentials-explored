@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 import { 
   Handshake, Target, Building2, Users, Key, Settings, 
   Clock, RefreshCw, Home, Utensils, TrendingUp, Rocket, 
-  Globe, Leaf 
+  Globe, Leaf, Volume2 
 } from 'lucide-react';
 import { Lesson, ContentSection, AccordionItem } from '@/data/lessons';
+import lesson1Audio from '@/assets/lesson1-audio.mp3';
 import {
   Accordion,
   AccordionContent,
@@ -222,6 +223,41 @@ export function LessonContent({ lesson }: LessonContentProps) {
                 );
               })}
             </div>
+          </motion.div>
+        );
+
+      case 'audio':
+        return (
+          <motion.div
+            key={index}
+            className="content-block"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="icon-circle">
+                <Volume2 className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                Listen to This Section
+              </h3>
+            </div>
+            <audio 
+              controls 
+              className="w-full mb-4 rounded-lg"
+              src={lesson1Audio}
+            >
+              Your browser does not support the audio element.
+            </audio>
+            {section.transcript && (
+              <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                <p className="text-sm font-medium text-muted-foreground mb-2">Transcript</p>
+                <p className="text-foreground leading-relaxed whitespace-pre-line">
+                  {section.transcript}
+                </p>
+              </div>
+            )}
           </motion.div>
         );
 
