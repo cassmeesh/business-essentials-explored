@@ -235,7 +235,7 @@ export function LessonContent({ lesson }: LessonContentProps) {
         return (
           <motion.div
             key={index}
-            className="bg-card rounded-xl border border-border overflow-hidden mb-6"
+            className="bg-accent rounded-xl overflow-hidden mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -243,10 +243,10 @@ export function LessonContent({ lesson }: LessonContentProps) {
             <div className="p-5">
               {/* Header */}
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Headphones className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                  <Headphones className="w-5 h-5 text-accent-foreground" />
                 </div>
-                <h3 className="font-display text-base font-semibold text-foreground">
+                <h3 className="font-display text-base font-semibold text-accent-foreground">
                   Listen & Learn
                 </h3>
               </div>
@@ -263,13 +263,13 @@ export function LessonContent({ lesson }: LessonContentProps) {
               {/* Transcript Toggle */}
               {section.transcript && (
                 <Collapsible>
-                  <CollapsibleTrigger className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors group text-sm">
+                  <CollapsibleTrigger className="flex items-center gap-1.5 text-accent-foreground/80 hover:text-accent-foreground transition-colors group text-sm">
                     <ChevronDown className="w-4 h-4 transition-transform group-data-[state=open]:rotate-180" />
                     <span>View Transcript</span>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="bg-muted/50 rounded-lg p-4 mt-3">
-                      <p className="text-muted-foreground leading-relaxed whitespace-pre-line text-sm">
+                    <div className="bg-white/10 rounded-lg p-4 mt-3">
+                      <p className="text-accent-foreground/90 leading-relaxed whitespace-pre-line text-sm">
                         {section.transcript}
                       </p>
                     </div>
