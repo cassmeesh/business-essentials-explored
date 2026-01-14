@@ -268,7 +268,6 @@ export function LessonContent({ lesson }: LessonContentProps) {
                   <h3 className="font-display text-xl font-bold text-white">
                     Listen & Learn
                   </h3>
-                  <p className="text-white/70 text-sm">Audio introduction to this section</p>
                 </div>
               </div>
               
