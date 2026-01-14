@@ -34,7 +34,6 @@ export function LessonView({
   );
   const [quizScore, setQuizScore] = useState<number | null>(null);
 
-  const hasQuiz = lesson.quiz && lesson.quiz.length > 0;
   const hasMatching = lesson.matching && lesson.matching.length > 0;
 
   const handleStartQuiz = () => {
@@ -95,12 +94,10 @@ export function LessonView({
             <Clock className="w-4 h-4" />
             <span>{lesson.duration}</span>
           </div>
-          {hasQuiz && (
-            <div className="flex items-center gap-1">
-              <BookOpen className="w-4 h-4" />
-              <span>{lesson.quiz.length} question{lesson.quiz.length !== 1 ? 's' : ''}</span>
-            </div>
-          )}
+          <div className="flex items-center gap-1">
+            <BookOpen className="w-4 h-4" />
+            <span>{lesson.quiz.length} question{lesson.quiz.length !== 1 ? 's' : ''}</span>
+          </div>
         </div>
       </div>
 
@@ -115,32 +112,16 @@ export function LessonView({
           >
             <LessonContent lesson={lesson} />
 
-            {hasQuiz ? (
-              <div className="mt-8 flex justify-center">
-                <Button
-                  onClick={handleStartQuiz}
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  Take Knowledge Check
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div>
-            ) : (
-              <div className="mt-8 flex justify-center">
-                <Button
-                  onClick={() => {
-                    setViewState('complete');
-                    onComplete(100);
-                  }}
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  Complete Lesson
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div>
-            )}
+            <div className="mt-8 flex justify-center">
+              <Button
+                onClick={handleStartQuiz}
+                size="lg"
+                className="bg-primary hover:bg-primary/90"
+              >
+                Take Knowledge Check
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
           </motion.div>
         )}
 

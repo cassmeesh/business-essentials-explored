@@ -2,10 +2,9 @@ import { motion } from 'framer-motion';
 import { 
   Handshake, Target, Building2, Users, Key, Settings, 
   Clock, RefreshCw, Home, Utensils, TrendingUp, Rocket, 
-  Globe, Leaf, Wheat, HardHat, Factory
+  Globe, Leaf 
 } from 'lucide-react';
 import { Lesson, ContentSection, AccordionItem } from '@/data/lessons';
-import { AudioPlayer } from './AudioPlayer';
 import {
   Accordion,
   AccordionContent,
@@ -32,9 +31,6 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   rocket: Rocket,
   globe: Globe,
   leaf: Leaf,
-  wheat: Wheat,
-  'hard-hat': HardHat,
-  factory: Factory,
 };
 
 function getIcon(iconName: string) {
@@ -123,26 +119,16 @@ export function LessonContent({ lesson }: LessonContentProps) {
               </h3>
             )}
             <Accordion type="single" collapsible className="w-full">
-              {(section.items as AccordionItem[])?.map((item, i) => {
-                const ItemIcon = item.icon ? getIcon(item.icon) : null;
-                return (
-                  <AccordionItemUI key={i} value={`item-${i}`}>
-                    <AccordionTrigger className="text-left font-medium hover:text-primary">
-                      <span className="flex items-center gap-3">
-                        {ItemIcon && (
-                          <span className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <ItemIcon className="w-4 h-4 text-primary" />
-                          </span>
-                        )}
-                        {item.title}
-                      </span>
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed pl-11">
-                      {item.content}
-                    </AccordionContent>
-                  </AccordionItemUI>
-                );
-              })}
+              {(section.items as AccordionItem[])?.map((item, i) => (
+                <AccordionItemUI key={i} value={`item-${i}`}>
+                  <AccordionTrigger className="text-left font-medium hover:text-primary">
+                    {item.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {item.content}
+                  </AccordionContent>
+                </AccordionItemUI>
+              ))}
             </Accordion>
           </motion.div>
         );
@@ -236,22 +222,6 @@ export function LessonContent({ lesson }: LessonContentProps) {
                 );
               })}
             </div>
-          </motion.div>
-        );
-
-      case 'audio':
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            <AudioPlayer 
-              src={section.audioSrc || ''} 
-              title={section.title}
-              transcript={section.transcript}
-            />
           </motion.div>
         );
 
