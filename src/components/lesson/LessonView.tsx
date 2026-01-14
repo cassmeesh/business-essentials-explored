@@ -5,6 +5,7 @@ import { Lesson } from '@/data/lessons';
 import { LessonContent } from './LessonContent';
 import { KnowledgeCheck } from './KnowledgeCheck';
 import { MatchingExercise } from './MatchingExercise';
+import { AudioPlayer } from './AudioPlayer';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -110,6 +111,9 @@ export function LessonView({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+            {lesson.audioUrl && (
+              <AudioPlayer src={lesson.audioUrl} title="Listen to Lesson" />
+            )}
             <LessonContent lesson={lesson} />
 
             <div className="mt-8 flex justify-center">
