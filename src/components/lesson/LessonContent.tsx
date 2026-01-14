@@ -130,8 +130,8 @@ export function LessonContent({ lesson }: LessonContentProps) {
                     <AccordionTrigger className="text-left font-medium hover:text-primary">
                       <span className="flex items-center gap-3">
                         {ItemIcon && (
-                          <span className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <ItemIcon className="w-4 h-4 text-primary" />
+                          <span className="w-8 h-8 rounded-lg bg-lesson-icon/20 flex items-center justify-center flex-shrink-0">
+                            <ItemIcon className="w-4 h-4 text-lesson-icon" />
                           </span>
                         )}
                         {item.title}
@@ -172,7 +172,7 @@ export function LessonContent({ lesson }: LessonContentProps) {
               <div className="content-block border-t-4 border-primary">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="icon-circle">
-                    <LeftIcon className="w-5 h-5 text-primary-foreground" />
+                    <LeftIcon className="w-5 h-5 text-lesson-icon" />
                   </div>
                   <h4 className="font-display font-semibold text-foreground">
                     {compData.left.title}
@@ -183,7 +183,7 @@ export function LessonContent({ lesson }: LessonContentProps) {
               <div className="content-block border-t-4 border-accent">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="icon-circle-accent">
-                    <RightIcon className="w-5 h-5 text-accent-foreground" />
+                    <RightIcon className="w-5 h-5 text-lesson-icon" />
                   </div>
                   <h4 className="font-display font-semibold text-foreground">
                     {compData.right.title}
@@ -224,7 +224,7 @@ export function LessonContent({ lesson }: LessonContentProps) {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <div className="icon-circle mx-auto mb-3">
-                      <Icon className="w-5 h-5 text-primary-foreground" />
+                      <Icon className="w-5 h-5 text-lesson-icon" />
                     </div>
                     <p className="font-semibold text-foreground">{item.label}</p>
                     {item.description && (
