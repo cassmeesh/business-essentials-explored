@@ -2,8 +2,11 @@
  * SCORM Course Styles
  * ===================
  * Self-contained CSS for the SCORM package.
- * No external dependencies required.
+ * Matches the React app's Stoneridge brand design system.
  */
+
+/* Google Fonts - Same as React app */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 /* CSS Reset and Base Styles */
 *, *::before, *::after {
@@ -13,26 +16,27 @@
 }
 
 :root {
-    /* Color Palette - Stoneridge Brand */
-    --primary: #2B5F83;
-    --primary-dark: #1E4562;
-    --primary-light: #3A7BA8;
-    --accent: #B5C327;
-    --accent-dark: #96A31F;
-    --background: #F8F9FA;
-    --card-bg: #FFFFFF;
-    --text-primary: #1A1A2E;
-    --text-secondary: #6B7280;
-    --text-muted: #9CA3AF;
-    --border: #E5E7EB;
-    --success: #10B981;
-    --success-light: #D1FAE5;
-    --error: #EF4444;
-    --error-light: #FEE2E2;
+    /* Color Palette - Stoneridge Brand (matching React app) */
+    --primary: hsl(200, 36%, 29%);
+    --primary-dark: hsl(209, 100%, 25%);
+    --primary-light: hsl(209, 100%, 38%);
+    --accent: hsl(66, 48%, 45%);
+    --accent-dark: hsl(66, 48%, 35%);
+    --background: hsl(210, 25%, 97%);
+    --card-bg: hsl(0, 0%, 100%);
+    --text-primary: hsl(216, 35%, 15%);
+    --text-secondary: hsl(215, 16%, 47%);
+    --text-muted: hsl(215, 20%, 65%);
+    --border: hsl(214, 32%, 88%);
+    --success: hsl(99, 49%, 48%);
+    --success-light: hsl(99, 49%, 95%);
+    --error: hsl(0, 84%, 60%);
+    --error-light: hsl(0, 84%, 95%);
+    --icon: hsl(191, 62%, 54%);
     
-    /* Typography */
-    --font-display: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    /* Typography - Matching React app fonts */
+    --font-display: 'Montserrat', system-ui, -apple-system, sans-serif;
+    --font-body: 'Open Sans', system-ui, -apple-system, sans-serif;
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -48,10 +52,16 @@
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    /* Shadows - Matching React app */
+    --shadow-sm: 0 1px 2px 0 hsla(216, 35%, 15%, 0.05);
+    --shadow-md: 0 4px 6px -1px hsla(216, 35%, 15%, 0.08), 0 2px 4px -2px hsla(216, 35%, 15%, 0.08);
+    --shadow-lg: 0 10px 15px -3px hsla(216, 35%, 15%, 0.1), 0 4px 6px -4px hsla(216, 35%, 15%, 0.1);
+    --shadow-card: 0 1px 3px 0 hsla(216, 35%, 15%, 0.06), 0 1px 2px -1px hsla(216, 35%, 15%, 0.06);
+    --shadow-card-hover: 0 10px 20px -5px hsla(216, 35%, 15%, 0.12);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(209, 100%, 28%), hsl(209, 100%, 38%));
+    --gradient-accent: linear-gradient(135deg, hsl(99, 49%, 45%), hsl(99, 49%, 55%));
 }
 
 html {
@@ -65,17 +75,19 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Header */
 .header {
-    background: var(--primary);
+    background: var(--gradient-primary);
     color: white;
     padding: var(--spacing-md) var(--spacing-xl);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
 }
 
 .header-content {
@@ -89,7 +101,8 @@ body {
 .header-title {
     font-family: var(--font-display);
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: -0.025em;
 }
 
 .progress-container {
